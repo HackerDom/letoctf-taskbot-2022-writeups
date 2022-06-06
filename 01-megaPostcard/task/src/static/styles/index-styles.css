@@ -1,0 +1,127 @@
+body {
+  height: 100%;
+  background-color: #FF76D9;
+}
+.backgrounds {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+.backgrounds-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 67px;
+}
+.backgrounds-label {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 48px;
+    line-height: 56px;
+
+}
+.card-text-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+}
+.card-text {
+    width: 1078px;
+    height: 77px;
+    border: none;
+    border-radius: 15px;
+
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 48px;
+    line-height: 56px;
+
+    box-sizing: border-box;
+}
+.card-text:focus {
+    outline: none;
+}
+.device-name {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 96px;
+    line-height: 112px;
+    color: black;
+    left: 529px;
+    display: flex;
+    justify-content: center;
+}
+.card-text-label {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 48px;
+    line-height: 56px;
+    margin-top: 10px;
+}
+.img {
+    width: 369px;
+    height: 218px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    box-sizing: border-box;
+}
+.caption {
+    position: absolute;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    color: red;
+    margin-top: 75px;
+    visibility: hidden;
+}
+
+.backgrounds-caption {
+    position: absolute;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    color: red;
+    margin-top: 230px;
+    visibility: hidden;
+}
+[type=radio]:checked + img{
+    border: 5px solid #7A1D61;
+}
+.img:hover {
+    width: 375px;
+    height: 225px;
+    cursor: pointer;
+}
+.card-background__item {
+    visibility: hidden;
+}
+.submit-button {
+    width: 100%;
+    height: 118px;
+    cursor: pointer;
+    color: white;
+
+    border: none;
+    border-radius: 10px;
+    background-color: #A62683;
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 56px;
+}
+
+.submit-button:hover {
+    color: red;
+}

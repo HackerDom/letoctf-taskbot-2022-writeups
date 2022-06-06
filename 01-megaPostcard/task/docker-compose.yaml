@@ -1,0 +1,12 @@
+version: "3.2"
+
+services:
+  employee:
+    image: megapostcard:latest
+    container_name: megapostcard-app
+    build:
+      context: "./src"
+    ports:
+    - "13337:13337"
+    environment:
+      FLAG: LetoCTF{u1tR4_h4rd_55T1_4ga1in...}

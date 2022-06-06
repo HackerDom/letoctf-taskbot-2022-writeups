@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ .Title }}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link href="/static/styles/index-styles.css" rel="stylesheet">
+</head>
+<body>
+    <h1 class="device-name">МЕГАДЭВАЙС 3000</h1>
+    <form action="/create-postcard" class="form" method="POST">
+        <div class="card-text-container">
+            <label for="card-text" class="card-text-label">Текст открытки: </label>
+            <input name="card-text" class="card-text" id="card-text" placeholder="Введите текст открытки...">
+            <span class="caption"></span>
+        </div>
+        <div class="backgrounds-container">
+            <span class="backgrounds-label">Фон открытки</span>
+            <div class="backgrounds" id="backgrounds">
+                <div class="card-background">
+                    <label for="card-background__item1" class="card-background__item__label">
+                        <input name="card-background-image" type="radio" class="card-background__item" id="card-background__item1" value="static/img/first.jpeg">
+                        <img class="img" src="static/img/first.jpeg" alt="some">
+                    </label>
+                </div>
+                <div class="card-background">
+                    <label for="card-background__item2" class="card-background__item__label">
+                        <input name="card-background-image" type="radio" class="card-background__item" id="card-background__item2" value="static/img/second.jpeg">
+                        <img class="img" src="static/img/second.jpeg" alt="some">
+                    </label>
+                </div>
+                <div class="card-background">
+                    <label for="card-background__item3" class="card-background__item__label">
+                        <input name="card-background-image" type="radio" class="card-background__item" id="card-background__item3" value="static/img/third.jpeg">
+                        <img class="img" src="static/img/third.jpeg" alt="some">
+                    </label>
+                </div>
+                <div class="card-background">
+                    <label for="card-background__item4" class="card-background__item__label">
+                        <input name="card-background-image" type="radio" class="card-background__item" id="card-background__item4" value="static/img/fourth.jpeg">
+                        <img class="img" src="static/img/fourth.jpeg" alt="some">
+                    </label>
+                </div>
+                <span class="backgrounds-caption"></span>
+            </div>
+        </div>
+        <button class="submit-button" id="submit-button">Получить открытку</button>
+    </form>
+    <script src="/static/scripts/main.js"></script>
+</body>
+</html>

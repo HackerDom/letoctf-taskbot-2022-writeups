@@ -1,2 +1,3 @@
-# -letoctf-taskbot-2022-writeups
-LetoCTF 2022 task bot write-ups
+# letoctf-taskbot-2022-writeups
+Writeups:
+1. [megaPostcard](01-megaPostcard/README.md)
