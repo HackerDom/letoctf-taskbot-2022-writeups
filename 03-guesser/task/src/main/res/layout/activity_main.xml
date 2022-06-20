@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="80sp"
+            android:gravity="center_horizontal"
+            android:textSize="28sp"
+            android:text="Test your luck"
+            />
+        <EditText
+            android:id="@+id/flag"
+            android:layout_width="match_parent"
+            android:layout_margin="20sp"
+            android:layout_height="64sp"
+            android:layout_gravity="center_horizontal"
+            android:autofillHints="LetoCTF{}"
+            android:inputType="text"
+            android:textSize="15sp">
+        </EditText>
+
+        <Button
+            android:id="@+id/submitFlag"
+            android:layout_width="100sp"
+            android:layout_height="64sp"
+            android:layout_gravity="center_horizontal"
+            android:text="Guess"
+            android:textSize="16sp">
+        </Button>
+    </LinearLayout>
+</LinearLayout>
