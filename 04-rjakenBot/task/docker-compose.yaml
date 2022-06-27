@@ -1,0 +1,30 @@
+version: "3.2"
+
+services:
+  redis:
+    image: redis:7.0.0
+    container_name: rjaken_cache
+    restart: on-failure
+    volumes:
+      - "redis-data:/data"
+
+  rjaken-back:
+    image: rjaken-bot-back:latest
+    container_name: rjaken-bot-app
+    build:
+      context: "./back"
+    env_file:
+      - .env
+    restart: on-failure
+
+  rjaken-front:
+    image: rjaken-bot-front:latest
+    container_name: rjaken-bot-front
+    build:
+      context: "./front"
+    ports:
+      - "12345:80"
+    restart: on-failure
+
+volumes:
+  redis-data:
