@@ -1,4 +1,4 @@
-# LetoCTF Taskbot 2022 | 01-crypto
+# LetoCTF Taskbot 2022 | 02-crypto
 
 Автор: [darkside](https://github.com/darkside0000001)
 
@@ -40,7 +40,7 @@ c =  715821901574460089568337029047272975325714497812650071603426713924649631861
 ```
 phi = N - 1   #считаем функцию эйлера
 d = inverse(e,phi)   #считаем приватный ключ 
-flag = long_to_bytes(pow(c,d,N)) #декодим сообщение и получаем флаг
+flag = long_to_bytes(pow(c,d,N)) #расшифровываем сообщение и получаем флаг
 ```
 
 ## Флаг
