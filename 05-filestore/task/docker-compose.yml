@@ -1,0 +1,48 @@
+---
+version: '3.1'
+services:
+  minio:
+    image: minio/minio:RELEASE.2022-05-19T18-20-59Z.fips
+    healthcheck:
+      test: "curl localhost:9000/minio/health/ready"
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    ports:
+      - '127.0.0.1:9000:9000'
+      - '127.0.0.1:9001:9001'
+    command: 'server /data --console-address ":9001"'  
+    volumes:
+      - minio_data:/data
+    restart: always
+  postgres:
+    image: postgres:14.3
+    healthcheck:
+      test: "pg_isready -h postgres -p 5432 -q -U ${POSTGRES_USER}"
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    ports:
+      - '127.0.0.1:5432:5432'
+    env_file:
+      - .env
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: always
+  filestore:
+    build:
+      context: .
+    env_file:
+      - .env
+    depends_on:
+      - minio
+      - postgres
+    ports:
+      - '0.0.0.0:8080:8080'
+    volumes:
+      - ./wasm/ps.bin:/wasm/ps.bin:ro
+      - ./wasm/cipher.wasm:/wasm/cipher.wasm:ro
+    restart: always
+volumes:
+  postgres_data:
+  minio_data:

@@ -1,0 +1,2 @@
+blowfish==0.6.1
+requests==2.27.1
